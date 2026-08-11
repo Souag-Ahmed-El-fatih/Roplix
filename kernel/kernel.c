@@ -17,8 +17,28 @@
 
 #include <C/stdint.h>
 #include <roplix/kernel.h>
+#include <roplix/multiboot.h>
+#include <arch/x86/early_gfx.h>
 
-void kernel_main(uint32_t ebx, uint32_t eax) {
+loader_flags_t loader_flags;
 
-  return;
+void kernel_main(uint32_t ebx) {
+  
+  multiboot_info_t *mbinfo = (multiboot_info_t*)ebx;
+
+  /*
+    update loader flags
+  */
+  // memory info
+  if (mbinfo->flags & MULTIBOOT_MEMORY_INFO) 
+    loader_flags.memory = true;
+  else
+    loader_flags.memory = false;
+  // frame buffer info (VGA) 
+  if (mbinfo->flags & MULTIBOOT_INFO_FRAMEBUFFER_INFO)
+    loader_flags.fb = true; 
+  else 
+    loader_flags.fb = false;
+  
+  
 }

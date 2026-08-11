@@ -1,12 +1,11 @@
-
 /*
     ---------------------------------------------------
                Roplix operatin system (x86)
                GPL V 3.0
     ---------------------------------------------------
-    * kernel.h - C lang (header file)
+    * early_gfx.h - C lang (header file)
     * copy right (2026)  souag ahmed  <souagahmedelfatih@gmail.com>
-    * 10:28 PM 9/8/2026
+    * 2:19 PM 11/8/2026
     ---------------------------------------------------
     * devloper : Souag Ahmed El Fatih
     * github_acount = Souag-Ahmed-El-fatih 
@@ -14,19 +13,11 @@
     * all edits in : docs/edits.txt
 */
 
-#ifndef KERNEL_H
-#define KERNEL_H
 
-void kernel_main(uint32_t ebx);
+#ifndef EARLY_GFX_H
+#define EARLY_GFX_H 
 
-typedef struct {
-  uintptr_t addr;
-  uint32_t width;
-  uint32_t height;
-  uint32_t bpp;
-  uint32_t pitch;
-}gfx_info_t;
 
-#endif 
 
+#endif
 
