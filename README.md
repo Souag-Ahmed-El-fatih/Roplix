@@ -29,7 +29,8 @@ linker kernel & build elf kernel :
   make build_elf
 
 # You can support or contribute to us by visiting the following website:
-  https://souag-ahmed-el-fatih.github.io/Roplix-website/
-
+<<<<<<< HEAD
+      https://souag-ahmed-el-fatih.github.io/Roplix-website/
+>>>>>>> 83316a77848a998abcec8c429fa24925df71bae1
 My goal with this project is to build an operating system free of any legacy code or components,
 while enabling the execution of applications.
